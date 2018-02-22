@@ -1,13 +1,18 @@
 <ion-header>
 
   <ion-navbar color="primary">
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openDishOptions()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>Dish Details</ion-title>
   </ion-navbar>
   
 </ion-header>
   
   
-<ion-content padding>
+<ion-content padding overflow-scroll="false">
   
   <ion-card *ngIf="dish">
     <img src="{{BaseURL + dish.image}}"/>
